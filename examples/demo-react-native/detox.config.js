@@ -41,6 +41,12 @@ module.exports = {
       "device": {
         "avdName": "Pixel_API_28"
       }
+    },
+    "device": {
+      "type": "android.attached",
+      "device": {
+        "adbName": "device name"
+      }
     }
   },
   "configurations": {
@@ -66,6 +72,18 @@ module.exports = {
     "android.emu.release": {
       "device": "emulator",
       "app": "android.release"
+    },
+    "android.device.debug": {
+      "device": "device",
+      "app": "android.debug"
+    },
+    "android.device.release": {
+      "device": "device",
+      "app": "android.release",
+      "session": {
+        "server": "ws://localhost:8102",
+        "sessionId": "com.wix.demo.react.native"
+      }
     }
   }
 };
